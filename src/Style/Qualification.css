@@ -1,0 +1,164 @@
+.education-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: 1400px; 
+  margin: 0 auto;
+  min-height: 80vh;
+  padding: 0 5%;
+  gap: 2rem;
+  position: relative;
+  top: 0px; 
+}
+
+.education-text {
+    margin-right: 6rem;
+  flex: 1;
+  padding-right: 4rem;
+  z-index: 2;
+}
+
+.education-text h2 {
+    margin-right: 10rem;
+  font-size: 5rem;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #fff 0%, #888 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.education-text p {
+  font-size: 1.5rem;
+  color: #a1a1aa;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.education-cards {
+    margin-right: 12rem;
+  flex: 1;
+  height: 600px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-swap-container {
+  /* Reset previous positioning as it's now inside a flex item */
+  position: relative; 
+  top: auto;
+  left: auto;
+  transform: none;
+  width: 100% !important; /* Force width to fit container */
+  height: 100% !important;
+  
+  perspective: 900px;
+  overflow: visible;
+  display: flex;
+  justify-content: center; /* Center the stack horizontally */
+  align-items: center; /* Center vertically */
+  transform-origin: center center;
+}
+
+
+
+
+.card {
+  position: absolute;
+  /* GSAP sets x/y, we just need base styles. 
+     Top/Left 50% is handled by GSAP or our CSS? 
+     Let's stick to the previous centered logic but relative to the new container. */
+  top: 50%;
+  left: 50%;
+  width: 450px !important; /* Fixed width for consistent look */
+  height: 350px !important; /* Fixed height */
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  
+  transform-style: preserve-3d;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px;
+  color: #fff;
+}
+
+.card h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.card p {
+  font-size: 16px;
+  color: #a1a1aa;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.card span {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 6px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 9999px;
+  font-size: 14px;
+  color: #e4e4e7;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 1024px) {
+  .education-container {
+    flex-direction: column;
+    padding-top: 100px;
+    top: 0;
+  }
+  
+  .education-text {
+    text-align: center;
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .education-text h2 {
+    font-size: 3.5rem;
+  }
+  
+  .education-cards {
+    width: 100%;
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-swap-container {
+    transform: scale(0.85); 
+  }
+  
+  .card {
+     width: 350px !important;
+     height: 280px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-swap-container {
+    transform: scale(0.7);
+  }
+}

@@ -1,0 +1,64 @@
+.navlinks {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 9999;
+    background: transparent;
+    pointer-events: none; 
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.navlinks a {
+    pointer-events: auto; /* Re-enable clicks on links */
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.navlinks a:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.navlinks a.active {
+    color: #ff3c3c;
+    text-shadow: 0 0 15px rgba(255, 60, 60, 0.6), 0 0 30px rgba(255, 60, 60, 0.3);
+}
+
+/* SkillPage Styles */
+.skill-page-container {
+    margin-top: 8rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    padding: 0 20px;
+}
+
+.languages-text-wrapper {
+    max-width: 90%;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.logo-loop-wrapper {
+    width: 100%;
+    max-width: 1200px; /* Limit max width for large screens */
+    height: 100px;
+    overflow: hidden;
+    color: white;
+    /* Ensure it doesn't overflow horizontally on small screens */
+    border-radius: 8px; /* Optional rounded corners */
+}
