@@ -1,0 +1,142 @@
+{
+    "about": {
+        "name": "ATHARVA HINGANE",
+        "text": "I am a passionate Frontend Developer with a strong focus on building modern, responsive, and user-friendly web applications. I specialize in creating visually appealing and highly interactive interfaces using React, JavaScript, HTML, CSS, and SQL for data handling and integration.\n\nI have hands-on experience in developing reusable UI components, implementing responsive layouts, and optimizing performance to ensure smooth and engaging user experiences across devices. I enjoy transforming design concepts into clean, functional interfaces while maintaining accessibility, usability, and performance best practices.\n\nWith a solid understanding of JavaScript logic, state management, component-based architecture, and API integration, I create dynamic applications that feel intuitive and efficient. I also work with SQL to manage and display structured data effectively within applications.\n\nI am continuously improving my skills, staying updated with modern frontend trends, and experimenting with new tools and technologies to enhance user experience. I thrive in collaborative environments and enjoy solving problems that lead to elegant, scalable digital solutions.",
+        "resume": "/assets/Atharv Hingane.pdf"
+    },
+    "skills": [
+        {
+            "icon": "SiReact",
+            "title": "React",
+            "href": "https://react.dev"
+        },
+        {
+            "icon": "SiNextdotjs",
+            "title": "Next.js",
+            "href": "https://nextjs.org"
+        },
+        {
+            "icon": "SiBootstrap",
+            "title": "Bootstrap",
+            "href": "https://getbootstrap.com"
+        },
+        {
+            "icon": "SiHtml5",
+            "title": "HTML5",
+            "href": "https://html.com"
+        },
+        {
+            "icon": "SiCss3",
+            "title": "CSS3",
+            "href": "https://css.com"
+        },
+        {
+            "icon": "SiJavascript",
+            "title": "JavaScript",
+            "href": "https://javascript.com"
+        },
+        {
+            "icon": "SiMysql",
+            "title": "MySQL",
+            "href": "https://mysql.com"
+        },
+        {
+            "icon": "SiGithub",
+            "title": "GitHub",
+            "href": "https://github.com"
+        }
+    ],
+    "projects": [
+        {
+            "id": 1,
+            "title": "HyperPC",
+            "description": "Custom High-Performance Gaming Rigs and Creators workstation.",
+            "image": "/assets/hyperpc.png",
+            "deployment": "hyperpc.vercel.app",
+            "domain": "hyperpc.io",
+            "status": "Ready",
+            "created": "12/20/25",
+            "branch": "main",
+            "commit": "d4f8a21",
+            "type": "Personal Project",
+            "repo": "https://github.com/AtharvaHingane/hyperpc"
+        },
+        {
+            "id": 2,
+            "title": "SpaceX Clone",
+            "description": "A responsive SpaceX landing page clone with launch details.",
+            "image": "/assets/spacex_preview.png",
+            "deployment": "spacex-topaz.vercel.app",
+            "domain": "https://spacex-topaz.vercel.app/",
+            "status": "Ready",
+            "created": "11/13/25",
+            "branch": "main",
+            "commit": "e470358",
+            "type": "Mobile View Optimized",
+            "repo": "https://github.com/AtharvaHingane/SpaceX"
+        },
+        {
+            "id": 3,
+            "title": "ProJect Portfolio",
+            "description": "My personal portfolio showcasing various projects and skills.",
+            "image": "/assets/portfolio_preview.png",
+            "deployment": "atharvahingane.vercel.app",
+            "domain": "atharva.me",
+            "status": "Ready",
+            "created": "01/01/26",
+            "branch": "main",
+            "commit": "a1c2b3d",
+            "type": "Personal Portfolio",
+            "repo": "https://github.com/AtharvaHingane/my-portfolio"
+        }
+    ],
+    "education": [
+        {
+            "id": 1,
+            "institution": "KisanVeer Mahavidyalaya Wai",
+            "qualification": "HSC SCIENCE PCMB",
+            "year": "2018",
+            "image": "/assets/img1.jpg"
+        },
+        {
+            "id": 2,
+            "institution": "Yashwantrao Chavan Institute of Science Satara",
+            "qualification": "B.voc Computer Science",
+            "year": "2022-2025",
+            "details": "First CLass",
+            "image": "/assets/Ycis.jpeg"
+        },
+        {
+            "id": 3,
+            "institution": "FullstackGuru It Solutions Pune",
+            "qualification": "Java Full Stack Development",
+            "year": "2025-2026",
+            "image": "/assets/FSG.jpeg"
+        }
+    ],
+    "contact": {
+        "accessKey": "241bea04-a798-466c-ab37-d0340fc66147",
+        "social": [
+            {
+                "name": "Github",
+                "url": "https://github.com/AtharvaHingane",
+                "icon": "FiGithub"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/atharvahingane",
+                "icon": "FiLinkedin"
+            },
+            {
+                "name": "Instagram",
+                "url": "https://instagram.com/__atharv_pvt_",
+                "icon": "FiInstagram"
+            },
+            {
+                "name": "Email",
+                "url": "mailto:atharvahingane220@gmail.com",
+                "icon": "FiMail"
+            }
+        ]
+    }
+}

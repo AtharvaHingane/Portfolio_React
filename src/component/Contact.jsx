@@ -1,15 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import '../Style/Contact.css';
 import { FiGithub, FiLinkedin, FiInstagram, FiMail, FiSend } from "react-icons/fi";
+import { DataContext } from '../context/DataContext';
+
+const iconMap = {
+    FiGithub: FiGithub,
+    FiLinkedin: FiLinkedin,
+    FiInstagram: FiInstagram,
+    FiMail: FiMail
+};
 
 const Contact = () => {
+    const { data, loading } = useContext(DataContext);
     const [result, setResult] = useState("");
 
     const onSubmit = async (event) => {
         event.preventDefault();
         setResult("Sending....");
         const formData = new FormData(event.target);
-        formData.append("access_key", "241bea04-a798-466c-ab37-d0340fc66147");
+        formData.append("access_key", data?.contact?.accessKey);
 
         try {
             const response = await fetch("https://api.web3forms.com/submit", {
@@ -17,20 +26,22 @@ const Contact = () => {
                 body: formData
             });
 
-            const data = await response.json();
+            const dataRes = await response.json();
 
-            if (data.success) {
+            if (dataRes.success) {
                 setResult("Form Submitted Successfully");
                 event.target.reset();
             } else {
-                console.error("Error", data);
-                setResult(data.message);
+                console.error("Error", dataRes);
+                setResult(dataRes.message);
             }
         } catch (error) {
             console.error("Error", error);
             setResult("Something went wrong. Please try again.");
         }
     };
+
+    if (loading) return <div>Loading...</div>;
 
     return (
         <div className="contact-section">
@@ -43,30 +54,17 @@ const Contact = () => {
                     </p>
 
                     <div className="social-links">
-                        <a href="https://github.com/AtharvaHingane" target="_blank" rel="noopener noreferrer" className="social-item">
-                            <div className="icon-box">
-                                <FiGithub />
-                            </div>
-                            <span>Github</span>
-                        </a>
-                        <a href="https://www.linkedin.com/in/atharvahingane" target="_blank" rel="noopener noreferrer" className="social-item">
-                            <div className="icon-box">
-                                <FiLinkedin />
-                            </div>
-                            <span>LinkedIn</span>
-                        </a>
-                        <a href="https://instagram.com/__atharv_pvt_" target="_blank" rel="noopener noreferrer" className="social-item">
-                            <div className="icon-box">
-                                <FiInstagram />
-                            </div>
-                            <span>Instagram</span>
-                        </a>
-                        <a href="mailto:atharvahingane220@gmail.com" className="social-item">
-                            <div className="icon-box">
-                                <FiMail />
-                            </div>
-                            <span>Email</span>
-                        </a>
+                        {data?.contact?.social?.map((social, index) => {
+                            const Icon = iconMap[social.icon];
+                            return (
+                                <a key={index} href={social.url} target={social.name === 'Email' ? "_self" : "_blank"} rel="noopener noreferrer" className="social-item">
+                                    <div className="icon-box">
+                                        {Icon && <Icon />}
+                                    </div>
+                                    <span>{social.name}</span>
+                                </a>
+                            );
+                        })}
                     </div>
                 </div>
 

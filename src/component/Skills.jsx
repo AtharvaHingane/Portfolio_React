@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import '../Style/Skills.css';
-import resume from '../assets/Atharv Hingane.pdf';
+import { DataContext } from '../context/DataContext';
 
 function Skills() {
+  const { data } = useContext(DataContext);
+
   return (
     <div className="navlinks">
       <NavLink to="/about">About Me</NavLink>
@@ -11,7 +13,7 @@ function Skills() {
       <NavLink to="/education">Qualification</NavLink>
       <NavLink to="/projects">Projects</NavLink>
       <NavLink to="/contact">Contact Me</NavLink>
-      <a href={resume} download="Atharva_Hingane_CV.pdf">Download CV</a>
+      <a href={data?.about?.resume} download="Atharva_Hingane_CV.pdf">Download CV</a>
     </div>
 
   );

@@ -9,10 +9,11 @@ import Education from './component/Education';
 import SkillPage from "./Pages/SkillPage";
 import Projects from "./component/Projects";
 import Contact from "./component/Contact";
+import { DataProvider } from "./context/DataContext";
 
 function App() {
   return (
-    <>
+    <DataProvider>
       <Particlerender />
 
       <div className="app-content">
@@ -26,7 +27,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
-    </>
+    </DataProvider>
   );
 }
 
