@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import LanguagesText from '../component/LanguagesText';
 import LogoLoop from '../component/LogoLoop';
-import { SiReact, SiNextdotjs, SiBootstrap, SiHtml5, SiCss3, SiJavascript, SiMysql, SiGithub } from 'react-icons/si';
+import { SiReact, SiNextdotjs, SiBootstrap, SiHtml5, SiCss3, SiJavascript, SiMysql, SiGithub, SiWebflow, SiFramer, SiFigma } from 'react-icons/si';
 import '../Style/Skills.css';
 import { DataContext } from '../context/DataContext';
 
@@ -13,7 +13,10 @@ const iconMap = {
     SiCss3: <SiCss3 />,
     SiJavascript: <SiJavascript />,
     SiMysql: <SiMysql />,
-    SiGithub: <SiGithub />
+    SiGithub: <SiGithub />,
+    SiWebflow: <SiWebflow />,
+    SiFramer: <SiFramer />,
+    SiFigma: <SiFigma />
 };
 
 const SkillPage = () => {
@@ -28,7 +31,7 @@ const SkillPage = () => {
     })) || [];
 
     // Using a bullet separator for a cleaner horizontal list look
-    const textContent = `React JS • React Bits • Javascript • HTML • CSS • Bootstrap • MySQL • GitHub`;
+    const textContent = `React JS • React Bits • Javascript • HTML • CSS • Bootstrap • MySQL • GitHub • Webflow • Framer • Figma`;
 
     return (
         <div className="skill-page-container">

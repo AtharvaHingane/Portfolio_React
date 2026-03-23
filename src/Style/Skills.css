@@ -15,6 +15,10 @@
     margin-bottom: 30px;
 }
 
+.navlinks.active {
+     
+}
+
 .navlinks a {
     pointer-events: auto; /* Re-enable clicks on links */
     text-decoration: none;
@@ -35,6 +39,12 @@
     color: #ff3c3c;
     text-shadow: 0 0 15px rgba(255, 60, 60, 0.6), 0 0 30px rgba(255, 60, 60, 0.3);
 }
+
+/* red only on first page load */
+.initial-red {
+    color: red !important;
+}
+
 
 /* SkillPage Styles */
 .skill-page-container {
