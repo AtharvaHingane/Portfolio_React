@@ -1,4 +1,4 @@
-import '../Style/Project.css';
+impoimport '../Style/Project.css';rt '../Style/Project.css';
 import { FiExternalLink, FiGithub, FiCheckCircle } from "react-icons/fi";
 import { BiGitBranch } from "react-icons/bi";
 import { useContext } from 'react';
@@ -47,16 +47,7 @@ const ProjectCard = ({ project }) => (
                     </div>
                 </div>
                 <div className="action-icons">
-                    <a
-                        href={project.repo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{ color: 'inherit', display: 'flex', alignItems: 'center' }}
-                        aria-label="View Source on GitHub"
-                    >
-                        <FiGithub className="nav-icon" />
-                    </a>
-                </div>
+                
             </div>
         </div>
     </div>
