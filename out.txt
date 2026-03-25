@@ -1,0 +1,48 @@
+﻿
+
+> atharva@0.1.0 build
+
+> react-scripts build
+
+
+
+Creating an optimized production build...
+
+
+
+Treating warnings as errors because process.env.CI = true.
+
+Most CI servers set it automatically.
+
+
+
+Failed to compile.
+
+
+
+[eslint] 
+
+src\component\LogoLoop.jsx
+
+  Line 231:13:  The element li has an implicit role of listitem. Defining this explicitly is redundant and should be avoided  jsx-a11y/no-redundant-roles
+
+  Line 270:11:  The element li has an implicit role of listitem. Defining this explicitly is redundant and should be avoided  jsx-a11y/no-redundant-roles
+
+  Line 281:11:  The element ul has an implicit role of list. Defining this explicitly is redundant and should be avoided      jsx-a11y/no-redundant-roles
+
+
+
+src\component\Projects.jsx
+
+  Line 2:26:  'FiGithub' is defined but never used  no-unused-vars
+
+
+
+src\component\Skills.jsx
+
+  Line 5:10:  'act' is defined but never used  no-unused-vars
+
+
+
+
+

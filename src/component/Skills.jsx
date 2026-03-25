@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import '../Style/Skills.css';
 import { DataContext } from '../context/DataContext';
-import { act } from "react";
+
 
 
 function Skills() {

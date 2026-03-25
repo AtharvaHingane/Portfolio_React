@@ -1,5 +1,5 @@
 import '../Style/Project.css';
-import { FiExternalLink, FiGithub, FiCheckCircle } from "react-icons/fi";
+import { FiExternalLink, FiCheckCircle } from "react-icons/fi";
 import { BiGitBranch } from "react-icons/bi";
 import { useContext } from 'react';
 import { DataContext } from '../context/DataContext';
