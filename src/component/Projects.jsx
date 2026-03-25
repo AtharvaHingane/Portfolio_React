@@ -1,4 +1,4 @@
-impoimport '../Style/Project.css';rt '../Style/Project.css';
+import '../Style/Project.css';
 import { FiExternalLink, FiGithub, FiCheckCircle } from "react-icons/fi";
 import { BiGitBranch } from "react-icons/bi";
 import { useContext } from 'react';
@@ -48,6 +48,7 @@ const ProjectCard = ({ project }) => (
                 </div>
                 <div className="action-icons">
                 
+                </div>
             </div>
         </div>
     </div>
